@@ -1,0 +1,38 @@
+.food_container {
+  margin: 2rem 10rem;
+}
+
+h2 {
+  font-weight: bold;
+}
+
+.food_main {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  gap: 1rem;
+  justify-content: center;
+  align-items: end;
+}
+
+.food_card {
+  width: 14.1rem;
+}
+
+.food_container img {
+  width: 100%;
+  margin-top: 5px;
+  border-radius: 10px;
+}
+
+.viewBtn {
+  background-color: rgb(61, 153, 61);
+  color: white;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  border-radius: 10px;
+}
+
+.viewBtn:hover {
+  background-color: rgb(50, 122, 50);
+}

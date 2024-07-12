@@ -1,0 +1,29 @@
+footer {
+  padding: 5rem 0 10rem 0;
+}
+.footer {
+  margin: 0 10rem;
+}
+
+footer p,
+small {
+  color: gray;
+}
+.outro {
+  padding-bottom: 2rem;
+  border-bottom: 1px solid gray;
+}
+
+.credit {
+  margin-top: 2rem;
+}
+
+.socmed {
+  margin-top: 1rem;
+  gap: 1rem;
+  /* justify-content: ; */
+  display: flex;
+}
+.socmed img {
+  width: 20px;
+}

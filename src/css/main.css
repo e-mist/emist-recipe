@@ -1,0 +1,24 @@
+* {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Selly Calligraphy";
+  src: url("../assets/fonts/Selly Calligraphy.ttf");
+}
+
+nav {
+  margin: 0 10rem;
+}
+.main {
+  background-color: white;
+  padding: 0 0 1rem 0;
+}
+body {
+  background-color: rgb(235, 233, 233);
+}

@@ -1,0 +1,40 @@
+.food_details_container {
+  margin: 0 10rem;
+}
+
+.main_info {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: start;
+  gap: 2rem;
+}
+
+.food_info_container {
+  flex-grow: 1;
+  box-shadow: 0 0 10px gray;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.food_ingredients_container {
+  margin-top: 1rem;
+}
+
+.food_instructions_container {
+  margin-top: 2rem;
+}
+
+.backBtn {
+  background-color: rgb(188, 58, 58);
+  padding: 0.5rem 1.5rem;
+  border-radius: 10px;
+  font-size: medium;
+  color: white;
+  margin: 1rem 0 2rem 0;
+}
+
+.backBtn:hover {
+  background-color: rgb(168, 53, 53);
+}

@@ -1,0 +1,16 @@
+input {
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  border-radius: 1rem;
+  border: 1px solid black;
+}
+
+.searchBtn {
+  width: 25px;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}

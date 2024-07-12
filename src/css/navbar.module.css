@@ -1,0 +1,26 @@
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 0;
+  border-bottom: 2px solid black;
+}
+
+h1 {
+  font-family: "Selly Calligraphy";
+  font-weight: bold;
+}
+
+.header_text {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.logo {
+  width: 64px;
+}
+
+.search {
+  display: flex;
+  gap: 1rem;
+}
