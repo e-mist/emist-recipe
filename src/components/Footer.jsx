@@ -21,16 +21,25 @@ export default function Footer() {
           </div>
           <div className={styles.socmed}>
             <a href="https://github.com/e-mist" target="__blank">
-              <img src="./src/assets/images/github.png" alt="" />
+              <i
+                className="fa-brands fa-github"
+                style={{ color: "#808080" }}
+              ></i>
             </a>
             <a href="mailto:edrylmoratas.p.use@gmail.com" target="__blank">
-              <img src="./src/assets/images/email.png" alt="" />
+              <i
+                className="fa-solid fa-envelope"
+                style={{ color: "#808080" }}
+              ></i>
             </a>
             <a
               href="https://www.facebook.com/edrylmoratas.mist"
               target="__blank"
             >
-              <img src="./src/assets/images/facebook.png" alt="" />
+              <i
+                className="fa-brands fa-facebook-f"
+                style={{ color: "#808080" }}
+              ></i>
             </a>
           </div>
         </div>

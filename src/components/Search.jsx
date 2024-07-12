@@ -33,11 +33,12 @@ export default function Search({ setFoodData, setFoodName, API_KEY }) {
         placeholder="Search for food..."
       />
       <button onClick={searchHandle}>
-        <img
+        <i className={styles.searchBtn + " fa-solid fa-magnifying-glass"}></i>
+        {/* <img
           className={styles.searchBtn}
           src="./src/assets/images/search.png"
           alt=""
-        />
+        /> */}
       </button>
     </>
   );
