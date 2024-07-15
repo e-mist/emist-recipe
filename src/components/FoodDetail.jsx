@@ -34,6 +34,7 @@ export default function FoodDetail({ foodID, setFoodID, API_KEY }) {
       <div className={styles.main_info}>
         <div>
           <h2>{food.title}</h2>
+          <br />
           <img src={food.image} alt="" />
         </div>
         <div className={styles.food_info_container}>
