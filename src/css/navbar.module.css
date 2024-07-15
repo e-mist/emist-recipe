@@ -28,6 +28,7 @@ h1 {
 
 @media screen and (max-width: 670px) {
   .search {
+    margin-top: 2rem;
     width: 100%;
   }
 }
