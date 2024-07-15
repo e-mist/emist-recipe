@@ -2,7 +2,15 @@ import { useState, useEffect } from "react";
 import styles from "../css/search.module.css";
 import axios from "axios";
 
-export default function Search({ setFoodData, setFoodName, API_KEY }) {
+export default function Search({
+  setFoodData,
+  setFoodName,
+  API_KEY,
+  apiIndex,
+  setApiIndex,
+  apis,
+  apiFunction,
+}) {
   const URL = "https://api.spoonacular.com/recipes/complexSearch";
 
   const [query, setQuery] = useState("");
@@ -13,7 +21,10 @@ export default function Search({ setFoodData, setFoodName, API_KEY }) {
         setFoodData(await res.data.results);
       })
       .catch((err) => {
-        console.log(err);
+        if (err.code == "ERR_BAD_REQUEST") {
+          apiFunction(apis[apiIndex]);
+          setApiIndex(apiIndex + 1);
+        }
       });
 
     setFoodName(query.charAt(0).toUpperCase() + query.slice(1).toLowerCase());
@@ -23,7 +34,8 @@ export default function Search({ setFoodData, setFoodName, API_KEY }) {
 
   useEffect(() => {
     searchHandle();
-  }, []);
+  }, [API_KEY]);
+
   return (
     <>
       <input
@@ -34,11 +46,6 @@ export default function Search({ setFoodData, setFoodName, API_KEY }) {
       />
       <button onClick={searchHandle}>
         <i className={styles.searchBtn + " fa-solid fa-magnifying-glass"}></i>
-        {/* <img
-          className={styles.searchBtn}
-          src="./src/assets/images/search.png"
-          alt=""
-        /> */}
       </button>
     </>
   );

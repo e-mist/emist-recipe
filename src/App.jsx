@@ -1,12 +1,25 @@
 import Navbar from "./components/Navbar";
 import Food from "./components/Food";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./css/main.css";
 import FoodDetail from "./components/FoodDetail";
 import Footer from "./components/Footer";
 
 function App() {
-  const API_KEY = "d360fd1cd8fd43c7928ff57f15633926";
+  const [API_KEY, SET_API_KEY] = useState("78116ea4290c445a85e031440721a4d3");
+  const [apiIndex, setApiIndex] = useState(0);
+
+  async function apiFunction(setApi) {
+    await SET_API_KEY(setApi);
+  }
+
+  const apis = [
+    "ec3e25c5d061461e96a9b83c19849fa4",
+    "c3cfffee2d14443687f465437119be2f",
+    "d360fd1cd8fd43c7928ff57f15633926",
+  ];
+
+  // const API_KEY = "d360fd1cd8fd43c7928ff57f15633926";
 
   const [foodData, setFoodData] = useState([]);
   const [foodID, setFoodID] = useState("");
@@ -14,22 +27,32 @@ function App() {
 
   return (
     <div>
-      <div className="main">
-        <Navbar
-          API_KEY={API_KEY}
-          setFoodName={setFoodName}
-          setFoodData={setFoodData}
-        />
-        {foodID == "" ? (
-          <Food
-            foodName={foodName}
+      <div className="main_container">
+        <div className="main">
+          <Navbar
+            API_KEY={API_KEY}
+            apiIndex={apiIndex}
+            setApiIndex={setApiIndex}
+            apis={apis}
+            apiFunction={apiFunction}
             setFoodName={setFoodName}
-            foodData={foodData}
-            setFoodID={setFoodID}
+            setFoodData={setFoodData}
           />
-        ) : (
-          <FoodDetail API_KEY={API_KEY} foodID={foodID} setFoodID={setFoodID} />
-        )}
+          {foodID == "" ? (
+            <Food
+              foodName={foodName}
+              setFoodName={setFoodName}
+              foodData={foodData}
+              setFoodID={setFoodID}
+            />
+          ) : (
+            <FoodDetail
+              API_KEY={API_KEY}
+              foodID={foodID}
+              setFoodID={setFoodID}
+            />
+          )}
+        </div>
       </div>
       <Footer />
     </div>

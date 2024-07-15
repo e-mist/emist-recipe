@@ -16,15 +16,11 @@ export default function FoodInfo({ food, isLoading }) {
         <p>
           Dish Type/s:&nbsp;
           {food.dishTypes.map((dish) => (
-            <span>[{dish}]&nbsp;</span>
+            <span key={dish}>[{dish}]&nbsp;</span>
           ))}
           🍽️
         </p>
       )}
-      {/* {isLoading == true ? (
-        <p>Loading...</p>
-      ): {"Dish Type/s:"}
-      {food.dishTypes.map((dish) => ())}} */}
     </>
   );
 }

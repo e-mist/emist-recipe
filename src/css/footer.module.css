@@ -1,8 +1,7 @@
 footer {
   padding: 5rem 0 10rem 0;
-}
-.footer {
-  margin: 0 10rem;
+  max-width: 80%;
+  margin: auto;
 }
 
 footer p,

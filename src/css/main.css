@@ -13,11 +13,16 @@
 }
 
 nav {
-  margin: 0 10rem;
+  max-width: 100%;
+  margin: auto;
+}
+.main_container {
+  background-color: white;
+  padding-bottom: 1rem;
 }
 .main {
-  background-color: white;
-  padding: 0 0 1rem 0;
+  max-width: 80%;
+  margin: auto;
 }
 body {
   background-color: rgb(235, 233, 233);

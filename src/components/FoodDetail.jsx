@@ -18,7 +18,6 @@ export default function FoodDetail({ foodID, setFoodID, API_KEY }) {
       `https://api.spoonacular.com/recipes/${foodID}/information?apiKey=${API_KEY}`
     )
       .then(async (res) => {
-        console.log(await res.data);
         setFood(await res.data);
         setIsLoading(false);
       })
