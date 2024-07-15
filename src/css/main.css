@@ -12,10 +12,6 @@
   src: url("../assets/fonts/Selly Calligraphy.ttf");
 }
 
-nav {
-  max-width: 100%;
-  margin: auto;
-}
 .main_container {
   background-color: white;
   padding-bottom: 1rem;
