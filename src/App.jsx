@@ -6,7 +6,7 @@ import FoodDetail from "./components/FoodDetail";
 import Footer from "./components/Footer";
 
 function App() {
-  const [API_KEY, SET_API_KEY] = useState("YOUR API KEY");
+  const [API_KEY, SET_API_KEY] = useState("c3cfffee2d14443687f465437119be2f");
   const [apiIndex, setApiIndex] = useState(0);
 
   async function apiFunction(setApi) {
@@ -14,7 +14,7 @@ function App() {
   }
 
   const apis = [
-    "OTHER API KEY"
+    "78116ea4290c445a85e031440721a4d3",
   ];
 
 
